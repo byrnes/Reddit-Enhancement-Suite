@@ -24,6 +24,11 @@ const targets = {
 		browserMinVersion: '114.0',
 		manifest: './chrome/beta/manifest.json',
 	},
+	safari: {
+		browserName: 'safari',
+		browserMinVersion: '15.4',
+		manifest: './safari/manifest.json',
+	},
 	edge: {
 		browserName: 'edge',
 		browserMinVersion: '114.0',
