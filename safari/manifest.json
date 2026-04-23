@@ -16,8 +16,8 @@
   },
   "action": {
     "default_icon": {
-      "19": "css-on-small.png",
-      "38": "css-on.png"
+      "19": "css-off-small.png",
+      "38": "css-off.png"
     }
   },
   "options_ui": {
