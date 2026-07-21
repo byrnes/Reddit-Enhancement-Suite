@@ -16,12 +16,12 @@ import packageInfo from './package.json' with { type: 'json' };
 const targets = {
 	chrome: {
 		browserName: 'chrome',
-		browserMinVersion: '114.0',
+		browserMinVersion: '138.0',
 		manifest: './chrome/manifest.json',
 	},
 	chromebeta: {
 		browserName: 'chrome',
-		browserMinVersion: '114.0',
+		browserMinVersion: '138.0',
 		manifest: './chrome/beta/manifest.json',
 	},
 	safari: {
@@ -31,19 +31,19 @@ const targets = {
 	},
 	edge: {
 		browserName: 'edge',
-		browserMinVersion: '114.0',
+		browserMinVersion: '138.0',
 		manifest: './chrome/manifest.json',
 	},
 	opera: {
 		browserName: 'opera',
-		browserMinVersion: '114.0',
+		browserMinVersion: '138.0',
 		manifest: './chrome/manifest.json',
 		noSourcemap: true,
 	},
 	firefox: {
 		browserName: 'firefox',
-		browserMinVersion: '115.0',
-		browserMobileMinVersion: '120.0',
+		browserMinVersion: '140.0',
+		browserMobileMinVersion: '142.0',
 		manifest: './firefox/manifest.json',
 		noSourcemap: true,
 	},
