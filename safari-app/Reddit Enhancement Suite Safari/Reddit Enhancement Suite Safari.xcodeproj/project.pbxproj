@@ -27,6 +27,7 @@
 		B3D8303E2F98F7FD00E9861D /* css-off.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D8302C2F98F7FD00E9861D /* css-off.png */; };
 		B3D8303F2F98F7FD00E9861D /* css-on-small.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D8302D2F98F7FD00E9861D /* css-on-small.png */; };
 		B3D830402F98F7FD00E9861D /* prompt.html in Resources */ = {isa = PBXBuildFile; fileRef = B3D8302E2F98F7FD00E9861D /* prompt.html */; };
+		B3D830482F98F7FD00E9861D /* prompt.css in Resources */ = {isa = PBXBuildFile; fileRef = B3D830492F98F7FD00E9861D /* prompt.css */; };
 		B3D830412F98F7FD00E9861D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D8302F2F98F7FD00E9861D /* manifest.json */; };
 		B3D830422F98F7FD00E9861D /* css-on.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D830302F98F7FD00E9861D /* css-on.png */; };
 		B3D830432F98F7FD00E9861D /* res.css in Resources */ = {isa = PBXBuildFile; fileRef = B3D830312F98F7FD00E9861D /* res.css */; };
@@ -89,6 +90,7 @@
 		B3D8302C2F98F7FD00E9861D /* css-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "css-off.png"; path = "../../../dist/safari/css-off.png"; sourceTree = "<group>"; };
 		B3D8302D2F98F7FD00E9861D /* css-on-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "css-on-small.png"; path = "../../../dist/safari/css-on-small.png"; sourceTree = "<group>"; };
 		B3D8302E2F98F7FD00E9861D /* prompt.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = prompt.html; path = ../../../dist/safari/prompt.html; sourceTree = "<group>"; };
+		B3D830492F98F7FD00E9861D /* prompt.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = prompt.css; path = ../../../dist/safari/prompt.css; sourceTree = "<group>"; };
 		B3D8302F2F98F7FD00E9861D /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../dist/safari/manifest.json; sourceTree = "<group>"; };
 		B3D830302F98F7FD00E9861D /* css-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "css-on.png"; path = "../../../dist/safari/css-on.png"; sourceTree = "<group>"; };
 		B3D830312F98F7FD00E9861D /* res.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = res.css; path = ../../../dist/safari/res.css; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				B3D8302C2F98F7FD00E9861D /* css-off.png */,
 				B3D8302D2F98F7FD00E9861D /* css-on-small.png */,
 				B3D8302E2F98F7FD00E9861D /* prompt.html */,
+				B3D830492F98F7FD00E9861D /* prompt.css */,
 				B3D8302F2F98F7FD00E9861D /* manifest.json */,
 				B3D830302F98F7FD00E9861D /* css-on.png */,
 				B3D830312F98F7FD00E9861D /* res.css */,
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D830402F98F7FD00E9861D /* prompt.html in Resources */,
+				B3D830482F98F7FD00E9861D /* prompt.css in Resources */,
 				B3D830432F98F7FD00E9861D /* res.css in Resources */,
 				B3D830392F98F7FD00E9861D /* LICENSE in Resources */,
 				B3D830372F98F7FD00E9861D /* prompt.entry.js in Resources */,
@@ -490,8 +494,10 @@
 		B3D830192F98F7FD00E9861D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77NZY979RW;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -504,7 +510,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -524,8 +530,10 @@
 		B3D8301A2F98F7FD00E9861D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77NZY979RW;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -538,7 +546,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -560,9 +568,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77NZY979RW;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -577,6 +587,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -601,9 +612,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77NZY979RW;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -618,6 +631,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
