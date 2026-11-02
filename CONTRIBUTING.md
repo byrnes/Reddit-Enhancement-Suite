@@ -19,10 +19,14 @@ Thinking about contributing to RES? Awesome! We just ask that you follow a few s
 #### First time installation
 
 1. Install [git](https://git-scm.com/).
-1. Install [node.js](https://nodejs.org) (version == 22).
-1. Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
+1. Install [node.js](https://nodejs.org) (version 26 LTS).
+1. Install [Corepack](https://yarnpkg.com/corepack) with `npm install --global corepack`, then run `corepack enable` (this command may require administrator rights on Windows). If an existing global Yarn installation conflicts, uninstall it with `npm uninstall --global yarn` first.
 1. [Clone this repository](https://help.github.com/articles/cloning-a-repository/).
-1. Run `yarn` in that folder.
+1. Run `yarn install` in that folder. Corepack automatically uses the Yarn version pinned in `package.json`.
+
+The project uses Yarn 4 with the `node-modules` linker. Commit `yarn.lock` when dependencies change; use `yarn install --immutable` to verify that an install does not change it (as CI does).
+
+The esbuild toolchain requires macOS 12 (Monterey) or newer on macOS, or Linux kernel 3.2 or newer on Linux.
 
 Once done, you can build the extension by running `yarn start` (see [Build commands](#build-commands)).
 
@@ -30,25 +34,32 @@ To load the extension into your browser, see [Loading RES into your browser](#lo
 
 #### Build commands
 
-**`yarn start [--browsers <browsers>]`** will clean `dist/`, then build RES (dev mode), and start a watch task that will rebuild RES when you make changes. Only changed files will be rebuilt.
+**`yarn start --browsers <browsers>`** will clean `dist/`, then build RES (dev mode), and start a watch task that will rebuild RES when you make changes. Only changed files will be rebuilt.
 
-**`yarn once [--browsers <browsers>]`** will clean `dist/`, then build RES (dev mode) a single time.
+**`yarn once --browsers <browsers>`** will clean `dist/`, then build RES (dev mode) a single time.
 
-**`yarn build [--browsers <browsers>]`** will clean `dist/`, then build RES (release mode). Each build output will be compressed to a .zip file in `dist/zip/`.
+**`yarn build --browsers <browsers>`** will clean `dist/`, then build RES (release mode). Each build output will be compressed to a .zip file in `dist/zip/`.
 
 `<browsers>` is a comma-separated list of browsers to target, e.g. `chrome,firefox`. `all` will build all targets. By default, `chrome` will be targeted.
 
 #### Lint and test commands
 
-**`yarn lint`** will verify the code style (and point out any errors) of all `.js` files in `lib/` (except `lib/vendor/`) using [ESLint](http://eslint.org/), as well as all `.scss` files with [stylelint](https://stylelint.io/).
+**`yarn lint`** will verify JavaScript code style throughout the repository (`.js`, `.cjs`, and `.mjs`) using [ESLint](https://eslint.org/), all `.scss` files with [stylelint](https://stylelint.io/), and translation key usage.
+
+Stylelint uses `stylelint-scss` 7 with shared configs that support Stylelint 17 and depend on the same SCSS plugin major, without Yarn resolutions. These configs use `scss/load-partial-extension` instead of the removed `scss/at-import-partial-extension` rule. The root config disables newly introduced checks and formatting rules and retains the previous `string-no-newline` setting to preserve the existing lint policy.
+
+ESLint 10 uses the root `eslint.config.js` flat configuration, including directory-specific overrides and ignores for `dist/` and vendor code (except `lib/vendor/index.js`). `hermes-eslint` (Flow's official ESLint parser, wrapped in `eslint.config.js` for ESLint 10 compatibility) parses current Flow syntax and import attributes; `eslint-plugin-import-x` retains the existing `import/*` rule names. Older custom plugins run through `@eslint/compat`; keep the compatibility wrappers until those plugins support the current ESLint API. Flow conventions are enforced without the unmaintained `eslint-plugin-flowtype`: `local/flow-file-annotation` (defined in `eslint.config.js`) requires every file to start with `/* @flow */` or `/* @noflow */`, and `no-restricted-syntax` selectors reject constructor types (`String`), weak types (`Function`, `Object`), non-PascalCase type names and inline `import { type ... }` specifiers. Missing or unused peer dependencies of third-party packages are declared in `packageExtensions` in `.yarnrc.yml`, so `yarn install` should complete without warnings.
+
+GitHub Actions runs the current ESLint checks. Code Climate's legacy ESLint engine is disabled because it cannot load this configuration.
 
 **`yarn lint-fix`** will autofix any [fixable](http://eslint.org/docs/user-guide/command-line-interface#fix) lint issues.
 
-**`yarn flow`** will run [Flow](https://flowtype.org/) type checking, and start the Flow server so future runs will complete faster. Use `yarn flow -- stop` to stop the server, or `yarn flow check` to run Flow once without starting the server.
+**`yarn flow`** will run [Flow](https://flowtype.org/) type checking, and start the Flow server so future runs will complete faster. Use `yarn flow stop` to stop the server, or `yarn flow check` to run Flow once without starting the server. Flow objects are exact by default, so write `{ a: T, ... }` for inexact object types, and suppress errors only with code-specific comments such as `// $FlowFixMe[incompatible-type] reason`.
+**`yarn test`** will run unit tests (in `lib/**/__tests__` directories) and lint configuration regression tests (in `build/__tests__`) using [Ava](https://github.com/avajs/ava).
 
-**`yarn test`** will run unit tests (in `__tests__` directories) using [Ava](https://github.com/avajs/ava).
+The integration tests and their infrastructure are retained for future use, but are not currently runnable because Nightwatch is no longer installed. To re-enable the suite, restore the Nightwatch dependency (previously `1.7.13`).
 
-**`yarn integration <browsers> [-f <testFileGlob>]`** will run integration tests (in `tests/`) using [Nightwatch.js](http://nightwatchjs.org/).
+Once re-enabled, **`yarn integration <browsers> [-f <testFileGlob>]`** will run integration tests (in `tests/`) using [Nightwatch.js](http://nightwatchjs.org/).
 Currently just `chrome` and `firefox` can be targeted.
 
 To run integration tests locally, you need to run an instance of [Selenium Standalone Server](http://www.seleniumhq.org/download/) and have either [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/home) or [GeckoDriver](https://github.com/mozilla/geckodriver) on your `PATH`.
@@ -75,8 +86,6 @@ The default host and port (`localhost` and `4444`) should work for most local in
 
   - `.github/`: Github templates
   - `browser/`: extension API files common to all browsers
-  - `build/`: files handling automated browser deployments
-  - `changelog/`: release changelogs
   - `chrome/`: Chrome-specific RES files
   - `dist/`: build output
   - `examples/`: example code for new hosts/modules
@@ -122,7 +131,8 @@ If the host uses an API that does not support [CORS](https://en.wikipedia.org/wi
 #### Stylesheets
 
 Create a new `.scss` file in `lib/css/modules/` (with a leading underscore, e.g. `_myModule.scss`).
-Import the file in `lib/css/res.scss` (e.g. `@import 'modules/myPartial';`).
+Load the file with the other modules at the top of `lib/css/res.scss` (e.g. `@use 'modules/myPartial';`).
+Sass modules have their own scope: load shared dependencies explicitly in each partial (e.g. `@use '../zindex';` and `z-index: zindex.$zindex-big-editor;`). Do not use deprecated Sass `@import` rules.
 
 For toggleable CSS, add `bodyClass: true` to an option or module, then wrap your CSS with `.res-moduleId-optionKey` (boolean options), `.res-moduleId-optionKey-optionValue` (enum options), or `.res-moduleId` (modules).
 

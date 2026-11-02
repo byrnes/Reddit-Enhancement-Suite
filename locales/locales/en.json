@@ -933,12 +933,6 @@
 	"keyboardNavsSubredditFrontPageDesc": {
 		"message": "Go to subreddit front page."
 	},
-	"keyboardNavRandomTitle": {
-		"message": "Random"
-	},
-	"keyboardNavRandomDesc": {
-		"message": "Go to a random subreddit."
-	},
 	"keyboardNavNextPageTitle": {
 		"message": "Next Page"
 	},
@@ -1275,36 +1269,6 @@
 	"nightModeName": {
 		"message": "Night Mode"
 	},
-	"noPartName": {
-		"message": "No Participation"
-	},
-	"noPartDesc": {
-		"message": "Helps discourage brigading and helps you avoid getting banned, by warning against voting or commenting when following \"No Participation\" (np) links, and by providing options to prevent you from accidentally participating.\n\n[Find out more about \"No Participation\".](/r/NoParticipation/wiki/intro)"
-	},
-	"noPartDisableVoteButtonsTitle": {
-		"message": "Disable Vote Buttons"
-	},
-	"noPartDisableVoteButtonsDesc": {
-		"message": "Hide vote buttons. If you have already visited the page and voted, your prior votes will still be visible."
-	},
-	"noPartDisableCommentTextareaTitle": {
-		"message": "Disable Comment Textarea"
-	},
-	"noPartDisableCommentTextareaDesc": {
-		"message": "Disable commenting."
-	},
-	"noPartEvenIfSubscriberTitle": {
-		"message": "Even If Subscriber"
-	},
-	"noPartEvenIfSubscriberDesc": {
-		"message": "Enable NP mode in subreddits where you're a subscriber."
-	},
-	"noPartEscapeNPTitle": {
-		"message": "Escape NP"
-	},
-	"noPartEscapeNPDesc": {
-		"message": "Remove np mode when leaving a No-Participation page."
-	},
 	"notificationsName": {
 		"message": "RES Notifications"
 	},
@@ -1355,6 +1319,12 @@
 	},
 	"notificationsSticky": {
 		"message": "sticky"
+	},
+	"oldRedditRedirectName": {
+		"message": "Old Reddit Redirect"
+	},
+	"oldRedditRedirectDesc": {
+		"message": "Always redirect reddit.com pages to old.reddit.com, except pages that only work on new Reddit."
 	},
 	"onboardingName": {
 		"message": "RES Welcome Wagon"
@@ -1818,6 +1788,12 @@
 	"backupAndRestoreProvidersFile": {
 		"message": "File"
 	},
+	"backupAndRestoreExcludeAccountSwitcherTitle": {
+		"message": "Exclude Account Switcher"
+	},
+	"backupAndRestoreExcludeAccountSwitcherDesc": {
+		"message": "Exclude Account Switcher settings, including saved usernames, passwords, and two-factor authentication settings, from all new file and cloud backups (manual and automatic). Restoring these backups leaves the destination's Account Switcher settings unchanged. Existing backups are not changed."
+	},
 	"backupAndRestoreReloadWarningTitle": {
 		"message": "Reload Warning"
 	},
@@ -1836,8 +1812,8 @@
 	"backupAndRestoreAutomaticBackupsTitle": {
 		"message": "Automatic Backups"
 	},
-	"backupAndRestoreAutomaticBackupsDesc": {
-		"message": "Sync your backups to the specified provider.\n\nSyncing will occur periodically on pageload. If you use two computers simultaneously, some changes may be lost."
+	"backupAndRestoreAutomaticBackupsDescWithCredentialWarning": {
+		"message": "Sync your backups to the specified provider.\n\n**Cloud backup warning:** Unless \"Exclude Account Switcher\" is enabled, saved Account Switcher passwords are included as clear-text credentials in backups uploaded to cloud providers. See our [privacy policy](https://redditenhancementsuite.com/privacy/) for more details.\n\nSyncing will occur periodically on pageload. If you use two computers simultaneously, some changes may be lost."
 	},
 	"backupAndRestoreAutomaticBackupsNone": {
 		"message": "None"
@@ -1869,8 +1845,8 @@
 	"backupAndRestoreBackupTitle": {
 		"message": "Backup"
 	},
-	"backupAndRestoreBackupDesc": {
-		"message": "Make a backup of your current RES state. Download it with \"File\", or upload it to a cloud backup provider."
+	"backupAndRestoreBackupDescWithCredentialWarning": {
+		"message": "Make a backup of your current RES state. Download it with \"File\", or upload it to a cloud backup provider.\n\n**Cloud backup warning:** Unless \"Exclude Account Switcher\" is enabled, saved Account Switcher passwords are included as clear-text credentials in backups uploaded to cloud providers. See our [privacy policy](https://redditenhancementsuite.com/privacy/) for more details."
 	},
 	"backupAndRestoreRestoreTitle": {
 		"message": "Restore"
@@ -2816,6 +2792,9 @@
 	},
 	"nightModeAutomaticNightModeDesc": {
 		"message": "Enable automatic night mode.\n\nIn **automatic** mode, you will be prompted to share your location. Your location will only be used to calculate sunrise & sunset times.\n\nIn **user-defined hours** mode, night mode automatically starts and stops at the times configured below.\n\nFor the times below, a 24-hour clock (\"military time\") from 0:00 to 23:59 is used.\ne.g. the time 8:20pm would be written as 20:20, and 12:30am would be written as 00:30 or 0:30.\n\nBy choosing **system preference**, night mode is enabled only when the browser or OS indicates that a dark theme is preferred.\n\nTo temporarily override automatic night mode, manually flip the night mode switch.\nConfigure how long the override lasts below."
+	},
+	"nightModeAutomaticNightModeDescNoGeolocation": {
+		"message": "Enable automatic night mode.\n\nIn **user-defined hours** mode, night mode automatically starts and stops at the times configured below.\n\nFor the times below, a 24-hour clock (\"military time\") from 0:00 to 23:59 is used.\ne.g. the time 8:20pm would be written as 20:20, and 12:30am would be written as 00:30 or 0:30.\n\nBy choosing **system preference**, night mode is enabled only when the browser or OS indicates that a dark theme is preferred.\n\nTo temporarily override automatic night mode, manually flip the night mode switch.\nConfigure how long the override lasts below."
 	},
 	"nightModeAutomaticNightModeNone": {
 		"message": "Disabled"
@@ -3984,24 +3963,6 @@
 	},
 	"subredditManagerLinkProfilePostsDesc": {
 		"message": "show \"PROFILES\" link in subreddit manager."
-	},
-	"subredditManagerLinkRandomTitle": {
-		"message": "Link Random"
-	},
-	"subredditManagerLinkRandomDesc": {
-		"message": "Show \"RANDOM\" link in subreddit manager."
-	},
-	"subredditManagerLinkMyRandomTitle": {
-		"message": "Link My Random"
-	},
-	"subredditManagerLinkMyRandomDesc": {
-		"message": "Show \"MYRANDOM\" link in subreddit manager (reddit gold only)."
-	},
-	"subredditManagerLinkRandNSFWTitle": {
-		"message": "Link Rand NSFW"
-	},
-	"subredditManagerLinkRandNSFWDesc": {
-		"message": "Show \"RANDNSFW\" link in subreddit manager."
 	},
 	"subredditManagerLinkUsersTitle": {
 		"message": "Link Users"

@@ -91,10 +91,6 @@
         "message": "Store the last time you visited a subreddit in incognito/private mode.",
         "description": ""
     },
-    "keyboardNavRandomTitle": {
-        "message": "Aleatorio",
-        "description": ""
-    },
     "messageMenuUrl": {
         "message": "url",
         "description": ""
@@ -463,10 +459,6 @@
         "message": "Preset tags to be shown when tagging a user.",
         "description": ""
     },
-    "subredditManagerLinkRandNSFWTitle": {
-        "message": "Link Rand NSFW",
-        "description": ""
-    },
     "subredditManagerLastUpdateTitle": {
         "message": "Ultima Actualización",
         "description": ""
@@ -545,10 +537,6 @@
     },
     "keyboardNavFocusOnSearchBoxTitle": {
         "message": "Focus on Search Box",
-        "description": ""
-    },
-    "subredditManagerLinkRandomDesc": {
-        "message": "Mostrar enlace \"ALEATORIO\" en administrador subreddit.",
         "description": ""
     },
     "userHighlightFriendColorTitle": {
@@ -1287,10 +1275,6 @@
         "message": "Modo Nocturno Automático",
         "description": ""
     },
-    "noPartDisableCommentTextareaDesc": {
-        "message": "Desactivar comentarios.",
-        "description": ""
-    },
     "nerReturnToPrevPageTitle": {
         "message": "Regresar a Página Anterior",
         "description": ""
@@ -1317,10 +1301,6 @@
     },
     "commentToolsDesc": {
         "message": "Provee herramientas y atajos para composición de comentarios, texto en temas, páginas de wiki, y otras áreas de texto (markdown).",
-        "description": ""
-    },
-    "noPartName": {
-        "message": "Sin Participación",
         "description": ""
     },
     "presetsDesc": {
@@ -1461,10 +1441,6 @@
     },
     "commentToolsStrikeKeyTitle": {
         "message": "Strike Key",
-        "description": ""
-    },
-    "subredditManagerLinkMyRandomTitle": {
-        "message": "Enlace Mi Aleatorio",
         "description": ""
     },
     "multiredditNavbarHoverDelayDesc": {
@@ -2175,10 +2151,6 @@
         "message": "Make edited timestamps bold (e.g. \"last edited 50 minutes ago\").",
         "description": ""
     },
-    "noPartDesc": {
-        "message": "Helps discourage brigading and helps you avoid getting banned, by warning against voting or commenting when following \"No Participation\" (np) links, and by providing options to prevent you from accidentally participating.\n\n[Find out more about \"No Participation\".](/r/NoParticipation/wiki/intro)",
-        "description": ""
-    },
     "keyboardNavProfileViewTitle": {
         "message": "New Profile",
         "description": ""
@@ -2609,10 +2581,6 @@
     },
     "subredditManagerLinkSavedDesc": {
         "message": "Show \"SAVED\" link in subreddit manager.",
-        "description": ""
-    },
-    "noPartEvenIfSubscriberDesc": {
-        "message": "Activar modo NP en subreddit cuando estas suscrito.",
         "description": ""
     },
     "commentToolsQuoteKeyDesc": {
@@ -3093,10 +3061,6 @@
     },
     "showKarmaUseCommasDesc": {
         "message": "Usar formato de número local en karma.",
-        "description": ""
-    },
-    "noPartDisableVoteButtonsTitle": {
-        "message": "Desactivar Botones de Votación",
         "description": ""
     },
     "commentToolsLinkKeyDesc": {
@@ -4071,10 +4035,6 @@
         "message": "Mostrar fechas en zona horaria local cuando posicione el puntero sobre una fecha relativa.",
         "description": ""
     },
-    "noPartEscapeNPTitle": {
-        "message": "Salir de NP",
-        "description": ""
-    },
     "redditUserInfoDesc": {
         "message": "Reddits new native hover tooltip for users.",
         "description": ""
@@ -4241,10 +4201,6 @@
     },
     "betteRedditCommentCollapseInInboxDesc": {
         "message": "Mostrar el [-] botón de expandir en el buzón. ",
-        "description": ""
-    },
-    "noPartEvenIfSubscriberTitle": {
-        "message": "Even If Subscriber",
         "description": ""
     },
     "menuGearIconClickActionToggleMenu": {
@@ -4679,10 +4635,6 @@
         "message": "Agregar mejoras de legibilidad a comentarios.",
         "description": ""
     },
-    "keyboardNavRandomDesc": {
-        "message": "Ir a un subreddit aleatorio.",
-        "description": ""
-    },
     "voteEnhancementsInterpolateScoreColorDesc": {
         "message": "Smoothly blend link and comment score colors when the score is between two thresholds.",
         "description": ""
@@ -4771,10 +4723,6 @@
         "message": "Notificaciones RES",
         "description": ""
     },
-    "subredditManagerLinkMyRandomDesc": {
-        "message": "Show \"MYRANDOM\" link in subreddit manager (reddit gold only).",
-        "description": ""
-    },
     "userInfoHighlightButtonTitle": {
         "message": "Highlight Button",
         "description": ""
@@ -4785,10 +4733,6 @@
     },
     "backupAndRestoreFoundBackup": {
         "message": "Found new automatic backup from $1.",
-        "description": ""
-    },
-    "subredditManagerLinkRandNSFWDesc": {
-        "message": "Show \"RANDNSFW\" link in subreddit manager.",
         "description": ""
     },
     "styleTweaksSubredditStyleCheckboxTitle": {
@@ -4853,10 +4797,6 @@
     },
     "nerShowServerInfoDesc": {
         "message": "Mostrar el servidor π / detalles de depuración al lado de las herramientas Sin-Fin de Reddit.",
-        "description": ""
-    },
-    "noPartDisableCommentTextareaTitle": {
-        "message": "Desactivar Area de Texto de Comentarios",
         "description": ""
     },
     "tableToolsSortDesc": {
@@ -5031,10 +4971,6 @@
         "message": "Monitorear el número de comentarios y fechas de edición de temas que ha visitado en modo incognito/privado.",
         "description": ""
     },
-    "subredditManagerLinkRandomTitle": {
-        "message": "Enlace Aleatorio",
-        "description": ""
-    },
     "accountSwitcherAccountSwitchError": {
         "message": "Could not switch accounts. Reddit may be under heavy load. Please try again in a few moments.",
         "description": ""
@@ -5065,10 +5001,6 @@
     },
     "RESTipsNewFeatureTipsTitle": {
         "message": "New Feature Tips",
-        "description": ""
-    },
-    "noPartDisableVoteButtonsDesc": {
-        "message": "Ocultar botones de votación. Si ya ha visitado la página y votado, votos anteriores todavia seran visibles.",
         "description": ""
     },
     "commentStyleContinuityDesc": {
@@ -5237,10 +5169,6 @@
     },
     "quickMessageName": {
         "message": "Mensaje Rápido",
-        "description": ""
-    },
-    "noPartEscapeNPDesc": {
-        "message": "Remover modo np cuando salga de una página No-Participación.",
         "description": ""
     },
     "penaltyBoxSuspendFeaturesUndoButton": {

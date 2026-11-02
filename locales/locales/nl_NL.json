@@ -91,10 +91,6 @@
         "message": "Store the last time you visited a subreddit in incognito/private mode.",
         "description": ""
     },
-    "keyboardNavRandomTitle": {
-        "message": "Willekeurig",
-        "description": ""
-    },
     "messageMenuUrl": {
         "message": "url",
         "description": ""
@@ -463,10 +459,6 @@
         "message": "Preset tags to be shown when tagging a user.",
         "description": ""
     },
-    "subredditManagerLinkRandNSFWTitle": {
-        "message": "Link Rand NSFW",
-        "description": ""
-    },
     "subredditManagerLastUpdateTitle": {
         "message": "Last Update",
         "description": ""
@@ -545,10 +537,6 @@
     },
     "keyboardNavFocusOnSearchBoxTitle": {
         "message": "Focus Op Zoekvak",
-        "description": ""
-    },
-    "subredditManagerLinkRandomDesc": {
-        "message": "Show \"RANDOM\" link in subreddit manager.",
         "description": ""
     },
     "userHighlightFriendColorTitle": {
@@ -1287,10 +1275,6 @@
         "message": "Automatische nachtmodus",
         "description": ""
     },
-    "noPartDisableCommentTextareaDesc": {
-        "message": "Reageren Uitschakelen",
-        "description": ""
-    },
     "nerReturnToPrevPageTitle": {
         "message": "Terug naar vorige pagina",
         "description": ""
@@ -1317,10 +1301,6 @@
     },
     "commentToolsDesc": {
         "message": "Voegt gereedschappen en sneltoetsen toe voor het schrijven van reacties, tekst posts, wiki pagina's en andere tekstbewerkingsvelden.",
-        "description": ""
-    },
-    "noPartName": {
-        "message": "Geen Deelname",
         "description": ""
     },
     "presetsDesc": {
@@ -1461,10 +1441,6 @@
     },
     "commentToolsStrikeKeyTitle": {
         "message": "Strike Key",
-        "description": ""
-    },
-    "subredditManagerLinkMyRandomTitle": {
-        "message": "Link My Random",
         "description": ""
     },
     "multiredditNavbarHoverDelayDesc": {
@@ -2175,10 +2151,6 @@
         "message": "Bewerkingstijdstempels dikgedrukt weergeven (b.v. \"laatst 50 minuten geleden bewerkt\").",
         "description": ""
     },
-    "noPartDesc": {
-        "message": "Helps discourage brigading and helps you avoid getting banned, by warning against voting or commenting when following \"No Participation\" (np) links, and by providing options to prevent you from accidentally participating.\n\n[Find out more about \"No Participation\".](/r/NoParticipation/wiki/intro)",
-        "description": ""
-    },
     "keyboardNavProfileViewTitle": {
         "message": "New Profile",
         "description": ""
@@ -2609,10 +2581,6 @@
     },
     "subredditManagerLinkSavedDesc": {
         "message": "Show \"SAVED\" link in subreddit manager.",
-        "description": ""
-    },
-    "noPartEvenIfSubscriberDesc": {
-        "message": "Schakel NP-modus in subreddits waar je bent geabboneerd.",
         "description": ""
     },
     "commentToolsQuoteKeyDesc": {
@@ -3093,10 +3061,6 @@
     },
     "showKarmaUseCommasDesc": {
         "message": "Gebruik een punt voor grote karmagetallen.",
-        "description": ""
-    },
-    "noPartDisableVoteButtonsTitle": {
-        "message": "Stemknoppen Uitschakelen",
         "description": ""
     },
     "commentToolsLinkKeyDesc": {
@@ -4071,10 +4035,6 @@
         "message": "Laat de datum in jouw lokale tijdszone zien wanneer je over een relatieve datum beweegt.",
         "description": ""
     },
-    "noPartEscapeNPTitle": {
-        "message": "NP Verlaten",
-        "description": ""
-    },
     "redditUserInfoDesc": {
         "message": "Reddits new native hover tooltip for users.",
         "description": ""
@@ -4241,10 +4201,6 @@
     },
     "betteRedditCommentCollapseInInboxDesc": {
         "message": "Toon de [-] 'samenvouwen' knop in de inbox.",
-        "description": ""
-    },
-    "noPartEvenIfSubscriberTitle": {
-        "message": "Zelfs als geabboneerd",
         "description": ""
     },
     "menuGearIconClickActionToggleMenu": {
@@ -4679,10 +4635,6 @@
         "message": "Pas de leesbaarheid van reacties aan.",
         "description": ""
     },
-    "keyboardNavRandomDesc": {
-        "message": "Ga naar willekeurige subreddit.",
-        "description": ""
-    },
     "voteEnhancementsInterpolateScoreColorDesc": {
         "message": "Smoothly blend link and comment score colors when the score is between two thresholds.",
         "description": ""
@@ -4771,10 +4723,6 @@
         "message": "RES Notificaties",
         "description": ""
     },
-    "subredditManagerLinkMyRandomDesc": {
-        "message": "Show \"MYRANDOM\" link in subreddit manager (reddit gold only).",
-        "description": ""
-    },
     "userInfoHighlightButtonTitle": {
         "message": "Knop highlighten",
         "description": ""
@@ -4785,10 +4733,6 @@
     },
     "backupAndRestoreFoundBackup": {
         "message": "Found new automatic backup from $1.",
-        "description": ""
-    },
-    "subredditManagerLinkRandNSFWDesc": {
-        "message": "Show \"RANDNSFW\" link in subreddit manager.",
         "description": ""
     },
     "styleTweaksSubredditStyleCheckboxTitle": {
@@ -4853,10 +4797,6 @@
     },
     "nerShowServerInfoDesc": {
         "message": "Toon de π server / debugdetails naast de zwevende Eindeloos Reddit hulpmiddelen.",
-        "description": ""
-    },
-    "noPartDisableCommentTextareaTitle": {
-        "message": "Reactie Tekstvak Uitschakelen",
         "description": ""
     },
     "tableToolsSortDesc": {
@@ -5031,10 +4971,6 @@
         "message": "Controleer aantal reacties en bewerkingsdata van posts die je in de privé-broswenmodus hebt bezocht.",
         "description": ""
     },
-    "subredditManagerLinkRandomTitle": {
-        "message": "Link Random",
-        "description": ""
-    },
     "accountSwitcherAccountSwitchError": {
         "message": "Could not switch accounts. Reddit may be under heavy load. Please try again in a few moments.",
         "description": ""
@@ -5065,10 +5001,6 @@
     },
     "RESTipsNewFeatureTipsTitle": {
         "message": "Nieuw Hulpmiddel Tips",
-        "description": ""
-    },
-    "noPartDisableVoteButtonsDesc": {
-        "message": "Hide vote buttons. If you have already visited the page and voted, your prior votes will still be visible.",
         "description": ""
     },
     "commentStyleContinuityDesc": {
@@ -5237,10 +5169,6 @@
     },
     "quickMessageName": {
         "message": "Snel Bericht",
-        "description": ""
-    },
-    "noPartEscapeNPDesc": {
-        "message": "NP-modus uitschakelen als je een NP-pagina verlaat.",
         "description": ""
     },
     "penaltyBoxSuspendFeaturesUndoButton": {

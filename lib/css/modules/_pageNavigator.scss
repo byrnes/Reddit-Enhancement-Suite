@@ -1,4 +1,4 @@
-@import '../zindex';
+@use '../zindex';
 
 $thumb-width: 100px;
 $content-offsetleft: 54px; // icon width + margins
@@ -19,9 +19,9 @@ $page-offsetleft: 15px;
 	color: black;
 	background: hsl(0, 0%, 100%);
 	box-sizing: border-box;
-	box-shadow: hsla(0, 0%, 0%, .24) 0 1px 3px, hsla(0, 0%, 0%, .12) 0 3px 3px;
-	transition: all .3s;
-	z-index: $zindex-show-link-title;
+	box-shadow: hsla(0, 0%, 0%, 0.24) 0 1px 3px, hsla(0, 0%, 0%, 0.12) 0 3px 3px;
+	transition: all 0.3s;
+	z-index: zindex.$zindex-show-link-title;
 	font: 11px/1.6 verdana, sans-serif;
 
 	.res-nightmode & {
@@ -45,7 +45,8 @@ $page-offsetleft: 15px;
 	}
 
 	.res-show-link-content {
-		margin: 5px 46px 5px $content-offsetleft;
+		margin: 5px 46px;
+		margin-left: $content-offsetleft;
 	}
 
 	.res-show-link-thumb {
@@ -74,7 +75,7 @@ $page-offsetleft: 15px;
 	.res-show-link-tagline {
 		visibility: hidden;
 		opacity: 0;
-		transition: all .3s .1s;
+		transition: all 0.3s 0.1s;
 
 		.res-nightmode & {
 			color: hsl(0, 0%, 75%);
@@ -89,7 +90,7 @@ $page-offsetleft: 15px;
 		height: 24px;
 		text-align: center;
 		vertical-align: middle;
-		transition: font-size .2s .1s;
+		transition: font-size 0.2s 0.1s;
 
 		.res-nightmode & {
 			color: hsl(205, 100%, 41%);
@@ -105,7 +106,7 @@ $page-offsetleft: 15px;
 		margin: 5px 15px 0 15px;
 		visibility: hidden;
 		opacity: 0;
-		transition: all .2s;
+		transition: all 0.2s;
 		width: auto !important;
 		height: auto !important;
 	}
